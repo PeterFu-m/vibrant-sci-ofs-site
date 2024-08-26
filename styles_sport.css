@@ -55,7 +55,14 @@ body {
     margin-bottom: 40px; /* 增加logo下方的外边距 */
 }
 
-
+.sport-icon {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto 0px; /* 调整icon和其他元素之间的间距 */
+    background: url('only_the_difficulty.png') no-repeat center center;
+    background-size: contain;
+    --animation-delay: 0.4s;
+}
 
 .title {
     font-size: 72px; /* 大标题字体大小 */
@@ -66,6 +73,13 @@ body {
     --animation-delay: 0.6s;
 }
 
+.title-ub {
+    font-size: 25px; /* 副标题大小 */
+    margin-top: -50px; /* 副标题与上方元素的间距 */
+    margin-bottom: 100px; /* 副标题与下方元素的间距 */
+    font-weight: bolder; /* 正常字体粗细 */
+    --animation-delay: 0.8s;
+}
 .small-title {
     font-size: 25px; /* 副标题大小 */
     margin-top: 20px; /* 副标题与上方元素的间距 */
