@@ -56,8 +56,8 @@ body {
 }
 
 .sport-icon {
-    width: 100px;
-    height: 100px;
+    width: 300px;
+    height: 300px;
     margin: 0 auto 20px; /* 调整icon和其他元素之间的间距 */
     background: url('only_the_difficulty.png') no-repeat center center;
     background-size: contain;
