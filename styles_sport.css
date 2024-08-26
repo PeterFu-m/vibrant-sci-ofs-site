@@ -55,11 +55,11 @@ body {
     margin-bottom: 40px; /* 增加logo下方的外边距 */
 }
 
-.flower-icon {
+.sport-icon {
     width: 100px;
     height: 100px;
     margin: 0 auto 20px; /* 调整icon和其他元素之间的间距 */
-    background: url('VibrantSciLogo_b1.png') no-repeat center center;
+    background: url('only_the_difficulty.png') no-repeat center center;
     background-size: contain;
     --animation-delay: 0.4s;
 }
@@ -269,10 +269,10 @@ body {
     align-items: center;
 }
 
-.classroom .flower-icon {
+.classroom .sport-icon {
     width: 50px;
     height: 50px;
-    background: url('your-flower-image.png') no-repeat center center;
+    background: url('only_the_difficulty.png') no-repeat center center;
     background-size: contain;
     margin-bottom: 10px; /* 调整icon与文本之间的间距 */
 }
