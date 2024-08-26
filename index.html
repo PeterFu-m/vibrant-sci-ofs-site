@@ -37,12 +37,13 @@
             animation: none; /* No animation for body, only its children */
         }
 
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px
-            padding-top: 72px; /* Spacing between logo and content */
-        }
+.container {
+    max-width: calc(100% - 20px); /* Ensure the content width accounts for padding */
+    margin: 0 auto;
+    padding: 10px; /* Add 10px padding around the entire container */
+    padding-top: 72px; /* Spacing between logo and content */
+    box-sizing: border-box; /* Include padding in the container's width and height */
+}
 
         .logo {
             width: 75px; /* Reduced size to half of the original */
