@@ -216,8 +216,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 19px;
+    font-weight: regular;
     color: #FFFFFF;
     padding: 20px; /* 调整单个活动区块的内边距 */
     text-align: center;
