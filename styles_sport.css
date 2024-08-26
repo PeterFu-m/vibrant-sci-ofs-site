@@ -321,7 +321,7 @@ body {
     margin-top: 60px; /* 增加上方元素与描述之间的间距 */
     position: relative; /* 确保描述文本在背景上方 */
     z-index: 1;
-    color: #FFFFFF; /* 描述文本颜色设置为白色 */
+    color: #000000; /* 描述文本颜色设置为白色 */
 }
 
 .logo {
