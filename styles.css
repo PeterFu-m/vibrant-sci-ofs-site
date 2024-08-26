@@ -109,7 +109,7 @@ body {
     --animation-delay: 0.6s;
 }
 
-.title-ut-white {
+.title-ut {
     color: #ffffff;
     font-size: 25px; /* 副标题大小 */
     margin-top: 0px; /* 副标题与上方元素的间距 */
