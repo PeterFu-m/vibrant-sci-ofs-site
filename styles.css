@@ -112,7 +112,7 @@ body {
 .title-ut-white {
     color: #ffffff;
     font-size: 25px; /* 副标题大小 */
-    margin-top: -50px; /* 副标题与上方元素的间距 */
+    margin-top: 0px; /* 副标题与上方元素的间距 */
     margin-bottom: 100px; /* 副标题与下方元素的间距 */
     font-weight: bolder; /* 正常字体粗细 */
     --animation-delay: 0.8s;
@@ -352,7 +352,6 @@ body {
     min-height: 100vh; /* 确保覆盖整个视口 */
     justify-content: center;
     align-items: center;
-    padding: 80px 20px; /* 调整页面四周的填充 */
     box-sizing: border-box; /* 确保填充包含在元素大小中 */
 }
 
