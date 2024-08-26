@@ -64,7 +64,7 @@ body {
 }
 
 .title {
-    font-size: 64px; /* 大标题字体大小 */
+    font-size: 72px; /* 大标题字体大小 */
     font-weight: bolder; /* 大标题字体更粗 */
     margin: 0 0 20px 0; /* 大标题与上方和下方元素的间距 */
     line-height: 1.2;
@@ -75,7 +75,7 @@ body {
 .small-title {
     font-size: 25px; /* 副标题大小 */
     margin-top: 20px; /* 副标题与上方元素的间距 */
-    margin-bottom: 10px; /* 副标题与下方元素的间距 */
+    margin-bottom: 6px; /* 副标题与下方元素的间距 */
     font-weight: normal; /* 正常字体粗细 */
     --animation-delay: 0.8s;
 }
@@ -83,7 +83,7 @@ body {
 .shared-subtitle {
     font-size: 20px;
     margin-top: 50px; /* 在标题和此文本之间增加间距 */
-    margin-bottom: 20px; /* 此文本和下方内容之间的间距 */
+    margin-bottom: 30px; /* 此文本和下方内容之间的间距 */
     font-weight: normal;
     text-align: center; /* 副标题居中 */
     --animation-delay: 1s;
@@ -331,7 +331,7 @@ body {
 @media only screen and (max-width: 768px) {
 
     .title {
-        font-size: 45px; /* 调整移动设备上大标题的大小 */
+        font-size: 55px; /* 调整移动设备上大标题的大小 */
     }
 
     .small-title {
