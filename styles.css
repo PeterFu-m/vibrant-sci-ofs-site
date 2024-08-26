@@ -143,6 +143,17 @@ body {
     text-align: center; /* 部分副标题居中 */
     --animation-delay: 1.4s;
 }
+.button.sport-index {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #93FB04; /* 按钮背景颜色 */
+    color: #000000; /* 将按钮文本颜色设置为黑色 */
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
 
 .grid {
     display: flex;
@@ -339,7 +350,6 @@ body {
     position: relative;
     background-color: #000000; /* 黑色背景 */
     min-height: 100vh; /* 确保覆盖整个视口 */
-    display: flex;
     justify-content: center;
     align-items: center;
     padding: 80px 20px; /* 调整页面四周的填充 */
