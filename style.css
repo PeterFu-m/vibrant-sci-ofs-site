@@ -1,0 +1,323 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif , sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    text-align: center; /* Center all elements */
+    color: #000000;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Slight upward movement */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Return to original position */
+    }
+}
+
+*:not(.card-content) {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: var(--animation-delay, 0s); /* Default delay */
+}
+
+body {
+    --animation-delay: 0s; /* Body animates first */
+    opacity: 1; /* Ensure body is immediately visible */
+    animation: none; /* No animation for body, only its children */
+}
+
+.container {
+    max-width: calc(100% - 20px); /* Ensure the content width accounts for padding */
+    margin: 0 auto;
+    padding: 10px; /* Add 10px padding around the entire container */
+    padding-top: 72px; /* Spacing between logo and content */
+    box-sizing: border-box; /* Include padding in the container's width and height */
+}
+
+.logo {
+    width: 75px; /* Reduced size to half of the original */
+    margin-bottom: 20px; /* Spacing between logo and the next element */
+    --animation-delay: 0.2s;
+}
+
+.flower-icon {
+    width: 100px; /* Adjusted to half of the original size */
+    height: 100px; /* Adjusted to half of the original size */
+    margin: 0 auto 0px;
+    background: url('VibrantSciLogo_b1.png') no-repeat center center;
+    background-size: contain;
+    --animation-delay: 0.4s;
+}
+
+.flower-icon-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2); /* Center the image and double its size */
+    width: 100%;
+    height: 100%;
+    background: url('VibrantSciLogo_b1.png') no-repeat center center;
+    background-size: cover; /* Cover the entire container */
+    z-index: 0; /* Ensure it is behind the text */
+}
+
+.title {
+    font-size: 64px; /* Large title font size */
+    font-weight: bolder; /* Bolder font weight for title */
+    margin: 0 0 20px 0;
+    line-height: 1.2;
+    text-align: center; /* Ensure title is centered */
+    --animation-delay: 0.6s;
+}
+
+.small-title {
+    font-size: 20px; /* Subtitle size */
+    margin-bottom: 10px;
+    font-weight: normal; /* Normal font weight */
+    --animation-delay: 0.8s;
+}
+
+.shared-subtitle {
+    font-size: 15px;
+    margin-top: 50px; /* Adds space between the title and this text */
+    margin-bottom: 20px;
+    font-weight: normal;
+    text-align: center; /* Center subtitle */
+    --animation-delay: 1s;
+}
+
+.section-title {
+    font-size: 40px; /* Section title font size */
+    font-weight: bolder; /* Bolder font weight for section title */
+    margin-bottom: 20px;
+    text-align: center; /* Center section title */
+    --animation-delay: 1.2s;
+}
+
+.section-subtitle {
+    font-size: 16px; /* 1/3 of the title font size */
+    margin-bottom: 30px;
+    margin-top: 5px;
+    text-align: center; /* Center subtitle */
+    --animation-delay: 1.4s;
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    gap: 16px; /* 16px gap between cards */
+    margin: 0 auto;
+    max-width: 100%;
+    --animation-delay: 1.6s;
+}
+
+.card {
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.4s ease, color 0.4s ease;
+    width: calc(33.333% - 10.666px); /* Make sure cards maintain equal width */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    min-height: 200px; /* Ensure cards maintain the same height */
+}
+
+.card:nth-child(1) {
+    --animation-delay: 1.8s;
+}
+
+.card:nth-child(2) {
+    --animation-delay: 2s;
+}
+
+.card:nth-child(3) {
+    --animation-delay: 2.2s;
+}
+
+.card.orange {
+    background-color: #FFE5CC; /* Light orange */
+    color: #CC5200; /* Dark orange text */
+}
+
+.card.green {
+    background-color: #DFF2E0; /* Light green */
+    color: #2D8C42; /* Dark green text */
+}
+
+.card.pink {
+    background-color: #FFD6E8; /* Light pink */
+    color: #CC3385; /* Dark pink text */
+}
+
+.card.active.orange {
+    background-color: #FFFFFF;
+    color: #CC5200;
+}
+
+.card.active.green {
+    background-color: #FFFFFF;
+    color: #2D8C42;
+}
+
+.card.active.pink {
+    background-color: #FFFFFF;
+    color: #CC3385;
+}
+
+.card-content {
+    display: none; /* Hidden by default */
+    margin-top: 10px;
+    opacity: 1; /* Ensure the content doesn't animate */
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.card.active .card-content {
+    display: block;
+}
+
+.page1,
+.page2,
+.page3,
+.page4 {
+    padding: 60px 0; /* Adds space around each page section */
+    text-align: center; /* Center all content in these sections */
+}
+
+.page2,
+.page3,
+.page4 {
+    margin-top: 100px; /* 100px spacing between pages */
+}
+
+/* Page 3 Styling */
+.activity-container-wrapper {
+    max-width: 1000px; /* Limit the width to ensure it's centered */
+    margin: 0 auto; /* Center the container */
+}
+
+.activity-container {
+    background-color: #DDEAF7; /* Light blue background */
+    padding: 20px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px 100px 150px;
+    gap: 10px;
+    justify-content: center;
+    max-width: 100%; /* Ensure it doesn't exceed container */
+    box-sizing: border-box;
+}
+
+.activity {
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+}
+
+.badminton {
+    background-color: #5E8B71;
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+}
+
+.pingpong {
+    background-color: #F15A4A;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.basketball {
+    background-color: #F2A83C;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.pingpong-2 {
+    background-color: #F15A4A;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+.classroom {
+    background-color: #FFD700;
+    grid-column: 3 / 4;
+    grid-row: 1 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.classroom .flower-icon {
+    width: 50px;
+    height: 50px;
+    background: url('your-flower-image.png') no-repeat center center;
+    background-size: contain;
+    margin-bottom: 10px;
+}
+
+/* Page 4 Styling */
+.page4 {
+    position: relative;
+    background-color: #FFF8E1; /* Light yellow background */
+    min-height: 100vh; /* Ensure it covers the full height of the viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    box-sizing: border-box; /* Ensure padding is included in the element's size */
+}
+
+.page4-container {
+    text-align: center;
+    z-index: 1; /* Ensure content is above the background */
+    position: relative; /* Make sure the container is positioned relative to the background */
+    width: 100%; /* Ensure it takes full width */
+    max-width: 1000px; /* Limit maximum width */
+    margin: 0 auto; /* Center the container */
+}
+
+.description-bg {
+    background-color: #FFE5CC; /* Light orange background for the rounded rectangle */
+    border-radius: 20px; /* Rounded corners */
+    padding: 20px; /* Padding inside the rectangle */
+    margin-top: 30px; /* Spacing above the rectangle */
+    z-index: -1; /* Place behind the description text */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; /* Adjust the width as needed */
+    box-sizing: border-box;
+}
+
+.description {
+    background-color: rgba(255, 235, 205, 0.8); /* Light yellow background with opacity */
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 60px; /* Add extra margin to avoid overlap with the rectangle */
+    position: relative; /* Ensure it appears on top of the background */
+    z-index: 1;
+}
+
+.logo {
+    width: 75px; /* Set the size for the logo */
+    margin-bottom: 20px;
+}
