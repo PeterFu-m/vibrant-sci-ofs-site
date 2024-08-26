@@ -39,8 +39,8 @@ body {
 }
 
 .logo {
-    width: 75px; /* Reduced size to half of the original */
-    margin-bottom: 20px; /* Spacing between logo and the next element */
+    width: 100px; /* Reduced size to half of the original */
+    margin-bottom: 40px; /* Spacing between logo and the next element */
     --animation-delay: 0.2s;
 }
 
@@ -75,14 +75,14 @@ body {
 }
 
 .small-title {
-    font-size: 20px; /* Subtitle size */
+    font-size: 25px; /* Subtitle size */
     margin-bottom: 10px;
     font-weight: normal; /* Normal font weight */
     --animation-delay: 0.8s;
 }
 
 .shared-subtitle {
-    font-size: 15px;
+    font-size: 20px;
     margin-top: 50px; /* Adds space between the title and this text */
     margin-bottom: 20px;
     font-weight: normal;
