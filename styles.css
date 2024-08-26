@@ -29,6 +29,17 @@ body {
     opacity: 1; /* 确保body立即可见 */
     animation: none; /* body本身无动画，只有子元素有 */
 }
+button {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #4CAF50; /* 按钮背景颜色 */
+    color: white; /* 按钮文本颜色 */
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
 
 .container {
     max-width: calc(100% - 20px); /* 确保内容宽度包含填充 */
