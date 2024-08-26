@@ -46,7 +46,8 @@ body {
 .flower-icon {
     width: 100px;
     height: 100px;
-    margin: 100 auto;
+    margin: 0 auto;
+    padding-top: 100px; /* logo和内容之间的间距 */
     background: url('VibrantSciLogo_b1.png') no-repeat center center;
     background-size: contain;
     --animation-delay: 0.4s;
