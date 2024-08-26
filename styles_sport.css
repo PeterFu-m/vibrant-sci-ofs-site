@@ -158,18 +158,18 @@ body {
 }
 
 .card.active.orange {
-    background-color: #FFFFFF;
-    color: #CC5200;
+    background-color: #93FB04;
+    color: #000000;
 }
 
 .card.active.green {
-    background-color: #FFFFFF;
-    color: #2D8C42;
+    background-color: #93FB04;
+    color: #000000;
 }
 
 .card.active.pink {
-    background-color: #FFFFFF;
-    color: #CC3385;
+    background-color: #93FB04;
+    color: #000000;
 }
 
 .card-content {
