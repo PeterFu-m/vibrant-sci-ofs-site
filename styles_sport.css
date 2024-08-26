@@ -33,7 +33,7 @@ body {
 .button {
     width: 100%;
     padding: 12px 20px;
-    background-color: #FFE267; /* 按钮背景颜色 */
+    background-color: #93FB04; /* 按钮背景颜色 */
     color: #000000; /* 将按钮文本颜色设置为黑色 */
     border: none;
     border-radius: 10px;
@@ -143,18 +143,18 @@ body {
 }
 
 .card.orange {
-    background-color: #FFE5CC; /* 浅橙色背景 */
-    color: #CC5200; /* 深橙色文本 */
+    background-color: #93FB04; /* 浅橙色背景 */
+    color: #000000; /* 深橙色文本 */
 }
 
 .card.green {
-    background-color: #DFF2E0; /* 浅绿色背景 */
-    color: #2D8C42; /* 深绿色文本 */
+    background-color: #93FB04; /* 浅绿色背景 */
+    color: #000000; /* 深绿色文本 */
 }
 
 .card.pink {
-    background-color: #FFD6E8; /* 浅粉色背景 */
-    color: #CC3385; /* 深粉色文本 */
+    background-color: #93FB04; /* 浅粉色背景 */
+    color: #000000; /* 深粉色文本 */
 }
 
 .card.active.orange {
