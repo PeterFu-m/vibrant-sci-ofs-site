@@ -61,12 +61,15 @@
         }
 
         .flower-icon-bg {
-            width: 500px; /* Adjusted to half of the original size */
-            height: 500px; /* Adjusted to half of the original size */
-            margin: 0 auto -500px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(2); /* Center the image and double its size */
+            width: 100%;
+            height: 100%;
             background: url('VibrantSciLogo_b1.png') no-repeat center center;
-            background-size: contain;
-            --animation-delay: 0.4s;
+            background-size: cover; /* Cover the entire container */
+            z-index: 0; /* Ensure it is behind the text */
         }
 
         .title {
@@ -203,6 +206,79 @@
             margin-top: 100px; /* 100px spacing between pages */
         }
 
+        /* Page 3 Styling */
+        .activity-container-wrapper {
+            max-width: 1000px; /* Limit the width to ensure it's centered */
+            margin: 0 auto; /* Center the container */
+        }
+
+        .activity-container {
+            background-color: #DDEAF7; /* Light blue background */
+            padding: 20px;
+            border-radius: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 200px 100px 150px;
+            gap: 10px;
+            justify-content: center;
+            max-width: 100%; /* Ensure it doesn't exceed container */
+            box-sizing: border-box;
+        }
+
+        .activity {
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #FFFFFF;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .badminton {
+            background-color: #5E8B71;
+            grid-column: 1 / 2;
+            grid-row: 1 / 4;
+        }
+
+        .pingpong {
+            background-color: #F15A4A;
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+        }
+
+        .basketball {
+            background-color: #F2A83C;
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+
+        .pingpong-2 {
+            background-color: #F15A4A;
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+        }
+
+        .classroom {
+            background-color: #FFD700;
+            grid-column: 3 / 4;
+            grid-row: 1 / 4;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .classroom .flower-icon {
+            width: 50px;
+            height: 50px;
+            background: url('your-flower-image.png') no-repeat center center;
+            background-size: contain;
+            margin-bottom: 10px;
+        }
+
         /* Page 4 Styling */
         .page4 {
             position: relative;
@@ -219,16 +295,9 @@
             text-align: center;
             z-index: 1; /* Ensure content is above the background */
             position: relative; /* Make sure the container is positioned relative to the background */
-        }
-
-        .page4-background {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) scale(2); /* Center the image and double its size */
-            width: 45%; /* Adjust the width as needed; scale will double it */
-            height: auto;
-            z-index: 0; /* Ensure it is behind the text */
+            width: 100%; /* Ensure it takes full width */
+            max-width: 1000px; /* Limit maximum width */
+            margin: 0 auto; /* Center the container */
         }
 
         .description-bg {
@@ -321,7 +390,7 @@
         <!-- Page 4 content starts here -->
         <div class="page4">
             <div class="page4-container">
-                <img src="VibrantSciLogo_b1.png" alt="背景花" class="flower-icon-bg">
+                <div class="flower-icon-bg"></div>
                 <div class="small-title">花样科学</div>
                 <div class="title">我们的愿景</div>
                 <div class="shared-subtitle">玩科学，学科学，用科学。</div>
