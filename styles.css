@@ -10,103 +10,93 @@ body {
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(20px); /* Slight upward movement */
+        transform: translateY(20px); /* 轻微向上移动 */
     }
     to {
         opacity: 1;
-        transform: translateY(0); /* Return to original position */
+        transform: translateY(0); /* 回到原位置 */
     }
 }
 
 *:not(.card-content) {
     opacity: 0;
     animation: fadeIn 1s ease-in-out forwards;
-    animation-delay: var(--animation-delay, 0s); /* Default delay */
+    animation-delay: var(--animation-delay, 0s); /* 默认延迟 */
 }
 
 body {
-    --animation-delay: 0s; /* Body animates first */
-    opacity: 1; /* Ensure body is immediately visible */
-    animation: none; /* No animation for body, only its children */
+    --animation-delay: 0s; /* body元素先动画 */
+    opacity: 1; /* 确保body立即可见 */
+    animation: none; /* body本身无动画，只有子元素有 */
 }
 
 .container {
-    max-width: calc(100% - 20px); /* Ensure the content width accounts for padding */
+    max-width: calc(100% - 20px); /* 确保内容宽度包含填充 */
     margin: 0 auto;
-    padding: 10px; /* Add 10px padding around the entire container */
-    padding-top: 72px; /* Spacing between logo and content */
-    box-sizing: border-box; /* Include padding in the container's width and height */
+    padding: 10px; /* 为整个容器添加10px填充 */
+    padding-top: 72px; /* logo和内容之间的间距 */
+    box-sizing: border-box; /* 将填充包括在容器的宽高中 */
 }
 
 .logo {
     width: 75px; /* 设置logo的大小 */
-    margin-bottom: 70px; /* 增加logo下方的外边距 */
+    margin-bottom: 40px; /* 增加logo下方的外边距 */
 }
-body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif , sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #FFFFFF;
-    text-align: center; /* 所有元素居中 */
-    color: #000000;
-}
-
-
 
 .flower-icon {
-    width: 100px; /* Adjusted to half of the original size */
-    height: 100px; /* Adjusted to half of the original size */
-    margin: 0 auto 0px;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
     background: url('VibrantSciLogo_b1.png') no-repeat center center;
     background-size: contain;
     --animation-delay: 0.4s;
 }
 
 .title {
-    font-size: 64px; /* Large title font size */
-    font-weight: bolder; /* Bolder font weight for title */
+    font-size: 64px; /* 大标题字体大小 */
+    font-weight: bolder; /* 大标题字体更粗 */
     margin: 0 0 20px 0;
     line-height: 1.2;
-    text-align: center; /* Ensure title is centered */
+    text-align: center; /* 确保标题居中 */
     --animation-delay: 0.6s;
 }
 
 .small-title {
-    font-size: 25px; /* Subtitle size */
+    font-size: 25px; /* 副标题大小 */
     margin-bottom: 10px;
-    font-weight: normal; /* Normal font weight */
+    font-weight: normal; /* 正常字体粗细 */
     --animation-delay: 0.8s;
 }
 
 .shared-subtitle {
     font-size: 20px;
-    margin-top: 50px; /* Adds space between the title and this text */
+    margin-top: 50px; /* 在标题和此文本之间增加间距 */
     margin-bottom: 20px;
     font-weight: normal;
-    text-align: center; /* Center subtitle */
+    text-align: center; /* 副标题居中 */
     --animation-delay: 1s;
 }
 
 .section-title {
-    font-size: 40px; /* Section title font size */
-    font-weight: bolder; /* Bolder font weight for section title */
+    font-size: 40px; /* 部分标题字体大小 */
+    font-weight: bolder; /* 部分标题字体更粗 */
     margin-bottom: 20px;
-    text-align: center; /* Center section title */
+    text-align: center; /* 确保部分标题居中 */
     --animation-delay: 1.2s;
 }
 
 .section-subtitle {
-    font-size: 16px; /* 1/3 of the title font size */
+    font-size: 16px; /* 部分副标题字体大小 */
     margin-bottom: 30px;
     margin-top: 5px;
-    text-align: center; /* Center subtitle */
+    text-align: center; /* 部分副标题居中 */
     --animation-delay: 1.4s;
 }
 
 .grid {
     display: flex;
     justify-content: center;
-    gap: 16px; /* 16px gap between cards */
+    gap: 16px; /* 卡片之间的间距 */
     margin: 0 auto;
     max-width: 100%;
     --animation-delay: 1.6s;
@@ -119,9 +109,9 @@ body {
     position: relative;
     cursor: pointer;
     transition: background-color 0.4s ease, color 0.4s ease;
-    width: calc(33.333% - 10.666px); /* Make sure cards maintain equal width */
-    box-sizing: border-box; /* Ensure padding is included in width */
-    min-height: 200px; /* Ensure cards maintain the same height */
+    width: calc(33.333% - 10.666px); /* 确保卡片宽度一致 */
+    box-sizing: border-box; /* 确保填充包含在宽度中 */
+    min-height: 200px; /* 确保卡片高度一致 */
 }
 
 .card:nth-child(1) {
@@ -137,18 +127,18 @@ body {
 }
 
 .card.orange {
-    background-color: #FFE5CC; /* Light orange */
-    color: #CC5200; /* Dark orange text */
+    background-color: #FFE5CC; /* 浅橙色背景 */
+    color: #CC5200; /* 深橙色文本 */
 }
 
 .card.green {
-    background-color: #DFF2E0; /* Light green */
-    color: #2D8C42; /* Dark green text */
+    background-color: #DFF2E0; /* 浅绿色背景 */
+    color: #2D8C42; /* 深绿色文本 */
 }
 
 .card.pink {
-    background-color: #FFD6E8; /* Light pink */
-    color: #CC3385; /* Dark pink text */
+    background-color: #FFD6E8; /* 浅粉色背景 */
+    color: #CC3385; /* 深粉色文本 */
 }
 
 .card.active.orange {
@@ -167,9 +157,9 @@ body {
 }
 
 .card-content {
-    display: none; /* Hidden by default */
+    display: none; /* 默认隐藏 */
     margin-top: 10px;
-    opacity: 1; /* Ensure the content doesn't animate */
+    opacity: 1; /* 确保内容不进行动画 */
 }
 
 .card-title {
@@ -186,24 +176,24 @@ body {
 .page2,
 .page3,
 .page4 {
-    padding: 60px 0; /* Adds space around each page section */
-    text-align: center; /* Center all content in these sections */
+    padding: 60px 0; /* 为每个页面部分增加间距 */
+    text-align: center; /* 每个部分内容居中 */
 }
 
 .page2,
 .page3,
 .page4 {
-    margin-top: 100px; /* 100px spacing between pages */
+    margin-top: 100px; /* 各页面部分之间100px间距 */
 }
 
-/* Page 3 Styling */
+/* 第3页样式 */
 .activity-container-wrapper {
-    max-width: 1000px; /* Limit the width to ensure it's centered */
-    margin: 0 auto; /* Center the container */
+    max-width: 1000px; /* 限制宽度以确保居中 */
+    margin: 0 auto; /* 居中容器 */
 }
 
 .activity-container {
-    background-color: #DDEAF7; /* Light blue background */
+    background-color: #DDEAF7; /* 浅蓝色背景 */
     padding: 20px;
     border-radius: 20px;
     display: grid;
@@ -211,7 +201,7 @@ body {
     grid-template-rows: 200px 100px 150px;
     gap: 10px;
     justify-content: center;
-    max-width: 100%; /* Ensure it doesn't exceed container */
+    max-width: 100%; /* 确保不超出容器 */
     box-sizing: border-box;
 }
 
@@ -269,52 +259,19 @@ body {
     margin-bottom: 10px;
 }
 
-/* Page 4 Styling */
+/* 第4页样式 */
 .page4 {
     position: relative;
-    background-color: #FFF8E1; /* Light yellow background */
-    min-height: 100vh; /* Ensure it covers the full height of the viewport */
+    background-color: #FFF8E1; /* 浅黄色背景 */
+    min-height: 100vh; /* 确保覆盖整个视口 */
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 80px 20px;
-    box-sizing: border-box; /* Ensure padding is included in the element's size */
+    box-sizing: border-box; /* 确保填充包含在元素大小中 */
 }
 
 .page4-container {
     text-align: center;
-    z-index: 1; /* Ensure content is above the background */
-    position: relative; /* Make sure the container is positioned relative to the background */
-    width: 100%; /* Ensure it takes full width */
-    max-width: 1000px; /* Limit maximum width */
-    margin: 0 auto; /* Center the container */
-}
-
-.description-bg {
-    background-color: #FFE5CC; /* Light orange background for the rounded rectangle */
-    border-radius: 20px; /* Rounded corners */
-    padding: 20px; /* Padding inside the rectangle */
-    margin-top: 30px; /* Spacing above the rectangle */
-    z-index: -1; /* Place behind the description text */
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%; /* Adjust the width as needed */
-    box-sizing: border-box;
-}
-
-.description {
-    background-color: rgba(255, 235, 205, 0.8); /* Light yellow background with opacity */
-    padding: 20px;
-    border-radius: 10px;
-    font-size: 16px;
-    line-height: 1.6;
-    margin-top: 60px; /* Add extra margin to avoid overlap with the rectangle */
-    position: relative; /* Ensure it appears on top of the background */
-    z-index: 1;
-}
-
-.logo {
-    width: 75px; /* Set the size for the logo */
-    margin-bottom: 20px;
-}
+    z-index: 1; /* 确保内容在背景上方 */
+    position: relative; /* 确保
