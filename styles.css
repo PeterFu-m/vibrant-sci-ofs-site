@@ -318,20 +318,17 @@ body {
 
 /* 针对移动设备的媒体查询 */
 @media only screen and (max-width: 768px) {
-    body {
-        font-size: 70%; /* 将所有字体大小缩小为70% */
-    }
 
     .title {
         font-size: 45px; /* 调整移动设备上大标题的大小 */
     }
 
     .small-title {
-        font-size: 18px; /* 调整移动设备上副标题的大小 */
+        font-size: 20px; /* 调整移动设备上副标题的大小 */
     }
 
     .shared-subtitle {
-        font-size: 14px; /* 调整移动设备上共享副标题的大小 */
+        font-size: 19px; /* 调整移动设备上共享副标题的大小 */
     }
 
     .section-title {
@@ -343,10 +340,10 @@ body {
     }
 
     .card-title {
-        font-size: 16px; /* 调整移动设备上卡片标题的大小 */
+        font-size: 21px; /* 调整移动设备上卡片标题的大小 */
     }
 
     .description {
-        font-size: 12px; /* 调整移动设备上描述文字的大小 */
+        font-size: 19px; /* 调整移动设备上描述文字的大小 */
     }
 }
