@@ -173,7 +173,7 @@ body {
 
 .card-content {
     display: none; /* 默认隐藏 */
-    margin-top: 10px; /* 卡片内容与卡片标题之间的间距 */
+    margin-top: 5px; /* 卡片内容与卡片标题之间的间距 */
     opacity: 1; /* 确保内容不进行动画 */
 }
 
