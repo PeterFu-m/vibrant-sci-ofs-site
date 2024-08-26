@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #FFFFFF;
-    text-align: center; /* Center all elements */
+    text-align: center; /* 所有元素居中 */
     color: #000000;
 }
 
@@ -39,10 +39,19 @@ body {
 }
 
 .logo {
-    width: 100px; /* Reduced size to half of the original */
-    margin-bottom: 40px; /* Spacing between logo and the next element */
-    --animation-delay: 0.2s;
+    width: 75px; /* 设置logo的大小 */
+    margin-bottom: 40px; /* 增加logo下方的外边距 */
 }
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif , sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    text-align: center; /* 所有元素居中 */
+    color: #000000;
+}
+
+
 
 .flower-icon {
     width: 100px; /* Adjusted to half of the original size */
@@ -51,18 +60,6 @@ body {
     background: url('VibrantSciLogo_b1.png') no-repeat center center;
     background-size: contain;
     --animation-delay: 0.4s;
-}
-
-.flower-icon-bg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(2); /* Center the image and double its size */
-    width: 100%;
-    height: 100%;
-    background: url('VibrantSciLogo_b1.png') no-repeat center center;
-    background-size: cover; /* Cover the entire container */
-    z-index: 0; /* Ensure it is behind the text */
 }
 
 .title {
