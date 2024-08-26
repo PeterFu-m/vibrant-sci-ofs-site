@@ -313,7 +313,7 @@ body {
 }
 
 .description {
-    background-color: rgba(255, 235, 205, 0.8); /* 浅黄色背景，带透明度 */
+    background-color: #93FB04; /* 浅黄色背景，带透明度 */
     padding: 20px;
     border-radius: 10px;
     font-size: 16px;
