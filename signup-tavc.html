@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>报名今天在花科</title>
     <style>
         body {
@@ -56,16 +57,24 @@
         }
 
         button:hover {
-            background-color: #45a049;
+            background-color: #FFE267;
         }
 
         .qrcode-container {
             margin-top: 30px;
             margin-bottom: 20px; /* 确保二维码与页面底部有一些间距 */
         }
+
+        .alert {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            border-radius: 5px;
+        }
     </style>
-    <!-- 引入二维码生成库 -->
-    <script src="https://cdn.jsdelivr.net/npm/qrcodejs2@1.0.0/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1/qrcode.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -78,14 +87,14 @@
             <input type="date" id="date" name="date" required>
             
             <button type="submit">提交</button>
-            <button>此功能未开发，无效</button>
-            <a href="index.html">返回主页</a>
+            <a href="index.html" class="button">返回主页</a>
             
         </form>
     </div>
 
     <!-- 二维码显示容器放置在页面底部 -->
     <div id="qrcode" class="qrcode-container"></div>
+    <div id="alert" class="alert" style="display: none;">请妥善保管二维码，以便签到。</div>
 
     <script>
         document.getElementById('signup-form').addEventListener('submit', function(event) {
@@ -95,17 +104,21 @@
             const date = document.getElementById('date').value;
 
             // 生成二维码内容
-            const qrContent = `signuptavc(${phone})date(${date})`;
+            const qrContent = `todayatvcact.phone(${phone}).date:${date}`;
 
             // 清空之前生成的二维码
             document.getElementById('qrcode').innerHTML = "";
 
             // 生成新的二维码
-            new QRCode(document.getElementById('qrcode'), {
-                text: qrContent,
-                width: 128,  // 二维码宽度
-                height: 128, // 二维码高度
-            });
+            const qr = qrcode(0, 'M');
+            qr.addData(qrContent);
+            qr.make();
+
+            // 将二维码显示在页面上
+            document.getElementById('qrcode').innerHTML = qr.createImgTag();
+
+            // 显示提示信息
+            document.getElementById('alert').style.display = 'block';
         });
     </script>
 </body>
