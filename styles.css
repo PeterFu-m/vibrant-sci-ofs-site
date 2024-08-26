@@ -66,7 +66,7 @@ body {
 .small-title {
     font-size: 25px; /* 副标题大小 */
     margin-top: 20px; /* 副标题与上方元素的间距 */
-    margin-bottom: 10px; /* 副标题与下方元素的间距 */
+    margin-bottom: 20px; /* 副标题与下方元素的间距 */
     font-weight: normal; /* 正常字体粗细 */
     --animation-delay: 0.8s;
 }
@@ -74,7 +74,7 @@ body {
 .shared-subtitle {
     font-size: 20px;
     margin-top: 50px; /* 在标题和此文本之间增加间距 */
-    margin-bottom: 20px; /* 此文本和下方内容之间的间距 */
+    margin-bottom: 50px; /* 此文本和下方内容之间的间距 */
     font-weight: normal;
     text-align: center; /* 副标题居中 */
     --animation-delay: 1s;
@@ -84,14 +84,14 @@ body {
     font-size: 40px; /* 部分标题字体大小 */
     font-weight: bolder; /* 部分标题字体更粗 */
     margin-top: 40px; /* 部分标题与上方元素的间距 */
-    margin-bottom: 20px; /* 部分标题与下方元素的间距 */
+    margin-bottom: 40px; /* 部分标题与下方元素的间距 */
     text-align: center; /* 确保部分标题居中 */
     --animation-delay: 1.2s;
 }
 
 .section-subtitle {
     font-size: 16px; /* 部分副标题字体大小 */
-    margin-top: 5px; /* 部分副标题与上方元素的间距 */
+    margin-top: 30px; /* 部分副标题与上方元素的间距 */
     margin-bottom: 30px; /* 部分副标题与下方元素的间距 */
     text-align: center; /* 部分副标题居中 */
     --animation-delay: 1.4s;
