@@ -297,6 +297,16 @@ body {
     margin: 0 auto; /* 容器居中 */
     padding: 20px; /* 调整容器内部的填充 */
 }
+.pagesport {
+    position: relative;
+    background-color: #000000; /* 黑色背景 */
+    min-height: 100vh; /* 确保覆盖整个视口 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px; /* 调整页面四周的填充 */
+    box-sizing: border-box; /* 确保填充包含在元素大小中 */
+}
 
 .description-bg {
     background-color: #FFE5CC; /* 浅橙色背景 */
