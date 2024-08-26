@@ -37,26 +37,18 @@
             animation: none; /* No animation for body, only its children */
         }
 
-.container {
-    max-width: calc(100% - 20px); /* Ensure the content width accounts for padding */
-    margin: 0 auto;
-    padding: 10px; /* Add 10px padding around the entire container */
-    padding-top: 72px; /* Spacing between logo and content */
-    box-sizing: border-box; /* Include padding in the container's width and height */
-}
+        .container {
+            max-width: calc(100% - 20px); /* Ensure the content width accounts for padding */
+            margin: 0 auto;
+            padding: 10px; /* Add 10px padding around the entire container */
+            padding-top: 72px; /* Spacing between logo and content */
+            box-sizing: border-box; /* Include padding in the container's width and height */
+        }
 
         .logo {
             width: 75px; /* Reduced size to half of the original */
             margin-bottom: 20px; /* Spacing between logo and the next element */
             --animation-delay: 0.2s;
-        }
-        .square-bg-yellow {
-    width: 100000px;  /* Width of the square */
-    height: 100000px; /* Height of the square (same as width to make it a square) */
-    background-color: #FFFC67; /* Color of the square */
-    margin: 20px auto; /* Optional: Center the square and add some space around it */
-            object-fit: cover; /* Ensure the image covers the container */
-            z-index: -1; /* Place the image behind other content */
         }
 
         .flower-icon {
@@ -67,6 +59,7 @@
             background-size: contain;
             --animation-delay: 0.4s;
         }
+
         .flower-icon-bg {
             width: 500px; /* Adjusted to half of the original size */
             height: 500px; /* Adjusted to half of the original size */
@@ -75,6 +68,7 @@
             background-size: contain;
             --animation-delay: 0.4s;
         }
+
         .title {
             font-size: 64px; /* Large title font size */
             font-weight: bolder; /* Bolder font weight for title */
@@ -209,117 +203,62 @@
             margin-top: 100px; /* 100px spacing between pages */
         }
 
-        /* Page 3 styling starts here */
-        .activity-container-wrapper {
-            transform: scale(0.8); /* Scale down the entire container */
-            transform-origin: top center; /* Keep it centered */
-            margin-top: 40px; /* Adjust spacing as needed */
-        }
-
-        .activity-container {
-            background-color: #DDEAF7; /* Light blue background */
-            padding: 20px;
-            border-radius: 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 200px 100px 150px;
-            gap: 10px;
-            justify-content: center;
-        }
-
-        .activity {
-            border-radius: 10px;
+        /* Page 4 Styling */
+        .page4 {
+            position: relative;
+            background-color: #FFF8E1; /* Light yellow background */
+            min-height: 100vh; /* Ensure it covers the full height of the viewport */
             display: flex;
-            align-items: center;
             justify-content: center;
-            font-size: 24px;
-            font-weight: bold;
-            color: #FFFFFF;
-            padding: 20px;
+            align-items: center;
+            padding: 80px 20px;
+            box-sizing: border-box; /* Ensure padding is included in the element's size */
+        }
+
+        .page4-container {
             text-align: center;
+            z-index: 1; /* Ensure content is above the background */
+            position: relative; /* Make sure the container is positioned relative to the background */
         }
 
-        .badminton {
-            background-color: #5E8B71;
-            grid-column: 1 / 2;
-            grid-row: 1 / 4;
+        .page4-background {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(2); /* Center the image and double its size */
+            width: 45%; /* Adjust the width as needed; scale will double it */
+            height: auto;
+            z-index: 0; /* Ensure it is behind the text */
         }
 
-        .pingpong {
-            background-color: #F15A4A;
-            grid-column: 2 / 3;
-            grid-row: 1 / 2;
+        .description-bg {
+            background-color: #FFE5CC; /* Light orange background for the rounded rectangle */
+            border-radius: 20px; /* Rounded corners */
+            padding: 20px; /* Padding inside the rectangle */
+            margin-top: 30px; /* Spacing above the rectangle */
+            z-index: -1; /* Place behind the description text */
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%; /* Adjust the width as needed */
+            box-sizing: border-box;
         }
 
-        .basketball {
-            background-color: #F2A83C;
-            grid-column: 2 / 3;
-            grid-row: 2 / 3;
-        }
-
-        .pingpong-2 {
-            background-color: #F15A4A;
-            grid-column: 2 / 3;
-            grid-row: 3 / 4;
-        }
-
-        .classroom {
-            background-color: #FFD700;
-            grid-column: 3 / 4;
-            grid-row: 1 / 4;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .classroom .flower-icon {
-            width: 50px;
-            height: 50px;
-            background: url('your-flower-image.png') no-repeat center center;
-            background-size: contain;
-            margin-bottom: 10px;
-        }
-
-/*         .page4 {
-    background-color: #FFF8E1; /* Light yellow background */
-    min-height: 0vh; /* Cover the full height of the viewport */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 80px 80px;
-    position: buttom;
-    box-sizing: border-box; /* Ensure padding is included in the element's size */
-} */
-
-.page4-container {
-    text-align: center;
-    z-index: 1; /* Ensure content is above the background flower */
-}
-
-.page4-background {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(2); /* Center the image and double its size */
-    width: 45%; /* Adjust the width as needed; scale will double it */
-    height: auto;
-    z-index: 0; /* Ensure it is behind the text */
-}
-
-.logo {
-    width: 75px; /* Set the size for the logo */
-    margin-bottom: 20px;
-}
-
-/*         .page4 .description {
+        .description {
             background-color: rgba(255, 235, 205, 0.8); /* Light yellow background with opacity */
-            padding: 100px;
+            padding: 20px;
             border-radius: 10px;
             font-size: 16px;
             line-height: 1.6;
-            margin-top: 30px;
-        } */
+            margin-top: 60px; /* Add extra margin to avoid overlap with the rectangle */
+            position: relative; /* Ensure it appears on top of the background */
+            z-index: 1;
+        }
+
+        .logo {
+            width: 75px; /* Set the size for the logo */
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
@@ -382,13 +321,11 @@
         <!-- Page 4 content starts here -->
         <div class="page4">
             <div class="page4-container">
-                <img style="text-align: center;" 
-                    src="VibrantSciLogo_b1.png" alt="背景花" class="flower-icon-bg">
+                <img src="VibrantSciLogo_b1.png" alt="背景花" class="flower-icon-bg">
                 <div class="small-title">花样科学</div>
                 <div class="title">我们的愿景</div>
-                <div class="square-bg-yellow"></div>
                 <div class="shared-subtitle">玩科学，学科学，用科学。</div>
-                Re
+                <div class="description-bg"></div>
                 <div class="description">
                     正如我们的标语所言，我们希望每位孩子能在我们的课堂上有所收获。<br>
                     收获科学的乐趣，收获科学的知识，收获科学的益处。<br>
