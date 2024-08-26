@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>花样科学</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif , sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF;
+            text-align: center; /* Center all elements */
+            color: #000000;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px); /* Slight upward movement */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0); /* Return to original position */
+            }
+        }
+
+        *:not(.card-content) {
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+            animation-delay: var(--animation-delay, 0s); /* Default delay */
+        }
+
+        body {
+            --animation-delay: 0s; /* Body animates first */
+            opacity: 1; /* Ensure body is immediately visible */
+            animation: none; /* No animation for body, only its children */
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding-top: 72px; /* Spacing between logo and content */
+        }
+
+        .logo {
+            width: 75px; /* Reduced size to half of the original */
+            margin-bottom: 20px; /* Spacing between logo and the next element */
+            --animation-delay: 0.2s;
+        }
+
+        .flower-icon {
+            width: 35px; /* Adjusted to half of the original size */
+            height: 35px; /* Adjusted to half of the original size */
+            margin: 0 auto 0px;
+            background: url('your-flower-image.png') no-repeat center center;
+            background-size: contain;
+            --animation-delay: 0.4s;
+        }
+        .flower-icon-bg {
+            width: 500px; /* Adjusted to half of the original size */
+            height: 500px; /* Adjusted to half of the original size */
+            margin: 0 auto -500px;
+            background: url('your-flower-image.png') no-repeat center center;
+            background-size: contain;
+            --animation-delay: 0.4s;
+        }
+        .title {
+            font-size: 72px; /* Large title font size */
+            font-weight: bolder; /* Bolder font weight for title */
+            margin: 0 0 20px 0;
+            line-height: 1.2;
+            text-align: center; /* Ensure title is centered */
+            --animation-delay: 0.6s;
+        }
+
+        .small-title {
+            font-size: 25px; /* Subtitle size */
+            margin-bottom: 10px;
+            font-weight: normal; /* Normal font weight */
+            --animation-delay: 0.8s;
+        }
+
+        .shared-subtitle {
+            font-size: 20px;
+            margin-top: 50px; /* Adds space between the title and this text */
+            margin-bottom: 20px;
+            font-weight: normal;
+            text-align: center; /* Center subtitle */
+            --animation-delay: 1s;
+        }
+
+        .section-title {
+            font-size: 48px; /* Section title font size */
+            font-weight: bolder; /* Bolder font weight for section title */
+            margin-bottom: 20px;
+            text-align: center; /* Center section title */
+            --animation-delay: 1.2s;
+        }
+
+        .section-subtitle {
+            font-size: 16px; /* 1/3 of the title font size */
+            margin-bottom: 30px;
+            margin-top: 5px;
+            text-align: center; /* Center subtitle */
+            --animation-delay: 1.4s;
+        }
+
+        .grid {
+            display: flex;
+            justify-content: center;
+            gap: 16px; /* 16px gap between cards */
+            margin: 0 auto;
+            max-width: 100%;
+            --animation-delay: 1.6s;
+        }
+
+        .card {
+            border-radius: 10px;
+            padding: 20px;
+            text-align: left;
+            position: relative;
+            cursor: pointer;
+            transition: background-color 0.4s ease, color 0.4s ease;
+            width: calc(33.333% - 10.666px); /* Make sure cards maintain equal width */
+            box-sizing: border-box; /* Ensure padding is included in width */
+            min-height: 200px; /* Ensure cards maintain the same height */
+        }
+
+        .card:nth-child(1) {
+            --animation-delay: 1.8s;
+        }
+
+        .card:nth-child(2) {
+            --animation-delay: 2s;
+        }
+
+        .card:nth-child(3) {
+            --animation-delay: 2.2s;
+        }
+
+        .card.orange {
+            background-color: #FFE5CC; /* Light orange */
+            color: #CC5200; /* Dark orange text */
+        }
+
+        .card.green {
+            background-color: #DFF2E0; /* Light green */
+            color: #2D8C42; /* Dark green text */
+        }
+
+        .card.pink {
+            background-color: #FFD6E8; /* Light pink */
+            color: #CC3385; /* Dark pink text */
+        }
+
+        .card.active.orange {
+            background-color: #FFFFFF;
+            color: #CC5200;
+        }
+
+        .card.active.green {
+            background-color: #FFFFFF;
+            color: #2D8C42;
+        }
+
+        .card.active.pink {
+            background-color: #FFFFFF;
+            color: #CC3385;
+        }
+
+        .card-content {
+            display: none; /* Hidden by default */
+            margin-top: 10px;
+            opacity: 1; /* Ensure the content doesn't animate */
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+
+        .card.active .card-content {
+            display: block;
+        }
+
+        .page1,
+        .page2,
+        .page3,
+        .page4 {
+            padding: 60px 0; /* Adds space around each page section */
+            text-align: center; /* Center all content in these sections */
+        }
+
+        .page2,
+        .page3,
+        .page4 {
+            margin-top: 100px; /* 100px spacing between pages */
+        }
+
+        /* Page 3 styling starts here */
+        .activity-container-wrapper {
+            transform: scale(0.8); /* Scale down the entire container */
+            transform-origin: top center; /* Keep it centered */
+            margin-top: 40px; /* Adjust spacing as needed */
+        }
+
+        .activity-container {
+            background-color: #DDEAF7; /* Light blue background */
+            padding: 20px;
+            border-radius: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 200px 100px 150px;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .activity {
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #FFFFFF;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .badminton {
+            background-color: #5E8B71;
+            grid-column: 1 / 2;
+            grid-row: 1 / 4;
+        }
+
+        .pingpong {
+            background-color: #F15A4A;
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+        }
+
+        .basketball {
+            background-color: #F2A83C;
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+
+        .pingpong-2 {
+            background-color: #F15A4A;
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+        }
+
+        .classroom {
+            background-color: #FFD700;
+            grid-column: 3 / 4;
+            grid-row: 1 / 4;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .classroom .flower-icon {
+            width: 50px;
+            height: 50px;
+            background: url('your-flower-image.png') no-repeat center center;
+            background-size: contain;
+            margin-bottom: 10px;
+        }
+
+        .page4 {
+    background-color: #FFF8E1; /* Light yellow background */
+    min-height: 0vh; /* Cover the full height of the viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 300px;
+    position: buttom;
+    box-sizing: border-box; /* Ensure padding is included in the element's size */
+}
+
+.page4-container {
+    text-align: center;
+    z-index: 1; /* Ensure content is above the background flower */
+}
+
+.page4-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2); /* Center the image and double its size */
+    width: 45%; /* Adjust the width as needed; scale will double it */
+    height: auto;
+    z-index: 0; /* Ensure it is behind the text */
+}
+
+.logo {
+    width: 75px; /* Set the size for the logo */
+    margin-bottom: 20px;
+}
+
+        .page4 .description {
+            background-color: rgba(255, 235, 205, 0.8); /* Light yellow background with opacity */
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="VibrantSciLogo_b1.png" alt="花样科学 Logo" class="logo">
+
+        <div class="page1">
+            <div class="flower-icon"></div>
+            <div class="small-title">认识认识新面孔</div>
+            <div class="title">花样科学</div>
+            <div class="shared-subtitle">Vibrant-Sci</div>
+            <div class="shared-subtitle">带着孩子，学科学，玩科学，用科学</div>
+        </div>
+
+        <div class="page2">
+            <div class="small-title">详细了解一下？</div>
+            <div class="title">花样科学</div>
+            <div class="shared-subtitle">如何实现</div>
+            <div class="grid">
+                <div class="card orange" onclick="toggleCard(this)">
+                    <div class="card-title">玩科学</div>
+                    <div class="card-content">
+                        在“今天在花科”活动上了解通过一个个生活例子，提起兴趣，玩科学，让孩子们大展身手。
+                    </div>
+                </div>
+                <div class="card green" onclick="toggleCard(this)">
+                    <div class="card-title">学科学</div>
+                    <div class="card-content">
+                        深入浅出。教会孩子们灵活运用科学，培养科学兴趣。
+                    </div>
+                </div>
+                <div class="card pink" onclick="toggleCard(this)">
+                    <div class="card-title">用科学</div>
+                    <div class="card-content">
+                        遇到问题？用活动上学到的知识巧妙化解。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 3 content starts here -->
+        <div class="page3">
+            <div class="small-title">详细了解一下？</div>
+            <div class="title">今天在花科</div>
+            <div class="small-title">活动</div>
+            <div class="sub-title">我们的理想 <span>👇</span></div>
+
+            <div class="activity-container-wrapper">
+                <div class="activity-container">
+                    <div class="activity badminton">羽毛球活动区</div>
+                    <div class="activity pingpong">乒乓球活动区</div>
+                    <div class="activity basketball">篮球活动区</div>
+                    <div class="activity pingpong-2">乒乓球活动区</div>
+                    <div class="activity classroom">
+                        <div class="flower-icon"></div>
+                        今天在花科<br>课堂
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 4 content starts here -->
+        <div class="page4">
+            <div class="page4-container">
+                <img src="VibrantSciLogo_b1.png" alt="背景花" class="flower-icon-bg">
+                <div class="small-title">花样科学</div>
+                <div class="title">我们的愿景</div>
+                <div class="shared-subtitle">玩科学，学科学，用科学。</div>
+                <div class="description">
+                    正如我们的标语所言，我们希望每位孩子能在我们的课堂上有所收获。<br>
+                    收获科学的乐趣，收获科学的知识，收获科学的益处。<br>
+                    我们努力让孩子们在课余时间有丰富的活动，比如徒步、野炊、学科学。<br>
+                    同时，能学习户外活动知识，能学习科学知识，提高综合素养。<br>
+                    <br>
+                    我们正在做这些事。
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleCard(card) {
+            card.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
