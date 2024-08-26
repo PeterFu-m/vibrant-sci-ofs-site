@@ -76,7 +76,7 @@ body {
 .small-title {
     font-size: 25px; /* 副标题大小 */
     margin-top: 20px; /* 副标题与上方元素的间距 */
-    margin-bottom: 6px; /* 副标题与下方元素的间距 */
+    margin-bottom: 20px; /* 副标题与下方元素的间距 */
     font-weight: normal; /* 正常字体粗细 */
     --animation-delay: 0.8s;
 }
