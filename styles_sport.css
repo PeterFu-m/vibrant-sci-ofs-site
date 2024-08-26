@@ -58,7 +58,7 @@ body {
 .sport-icon {
     width: 300px;
     height: 300px;
-    margin: 0 auto 20px; /* 调整icon和其他元素之间的间距 */
+    margin: 0 auto 0px; /* 调整icon和其他元素之间的间距 */
     background: url('only_the_difficulty.png') no-repeat center center;
     background-size: contain;
     --animation-delay: 0.4s;
@@ -75,8 +75,8 @@ body {
 
 .small-title {
     font-size: 25px; /* 副标题大小 */
-    margin-top: 0px; /* 副标题与上方元素的间距 */
-    margin-bottom: 40px; /* 副标题与下方元素的间距 */
+    margin-top: -50px; /* 副标题与上方元素的间距 */
+    margin-bottom: 100px; /* 副标题与下方元素的间距 */
     font-weight: normal; /* 正常字体粗细 */
     --animation-delay: 0.8s;
 }
