@@ -36,13 +36,11 @@ body {
     padding: 10px; /* 为整个容器添加10px填充 */
     padding-top: 72px; /* logo和内容之间的间距 */
     box-sizing: border-box; /* 将填充包括在容器的宽高中 */
-    /* 调整整体容器的内外边距 */
 }
 
 .logo {
     width: 75px; /* 设置logo的大小 */
     margin-bottom: 40px; /* 增加logo下方的外边距 */
-    /* 调整logo和下面元素的间距 */
 }
 
 .flower-icon {
@@ -66,7 +64,7 @@ body {
 .small-title {
     font-size: 25px; /* 副标题大小 */
     margin-top: 20px; /* 副标题与上方元素的间距 */
-    margin-bottom: 20px; /* 副标题与下方元素的间距 */
+    margin-bottom: 10px; /* 副标题与下方元素的间距 */
     font-weight: normal; /* 正常字体粗细 */
     --animation-delay: 0.8s;
 }
@@ -74,7 +72,7 @@ body {
 .shared-subtitle {
     font-size: 20px;
     margin-top: 50px; /* 在标题和此文本之间增加间距 */
-    margin-bottom: 50px; /* 此文本和下方内容之间的间距 */
+    margin-bottom: 20px; /* 此文本和下方内容之间的间距 */
     font-weight: normal;
     text-align: center; /* 副标题居中 */
     --animation-delay: 1s;
@@ -84,14 +82,14 @@ body {
     font-size: 40px; /* 部分标题字体大小 */
     font-weight: bolder; /* 部分标题字体更粗 */
     margin-top: 40px; /* 部分标题与上方元素的间距 */
-    margin-bottom: 40px; /* 部分标题与下方元素的间距 */
+    margin-bottom: 20px; /* 部分标题与下方元素的间距 */
     text-align: center; /* 确保部分标题居中 */
     --animation-delay: 1.2s;
 }
 
 .section-subtitle {
     font-size: 16px; /* 部分副标题字体大小 */
-    margin-top: 30px; /* 部分副标题与上方元素的间距 */
+    margin-top: 5px; /* 部分副标题与上方元素的间距 */
     margin-bottom: 30px; /* 部分副标题与下方元素的间距 */
     text-align: center; /* 部分副标题居中 */
     --animation-delay: 1.4s;
@@ -118,7 +116,6 @@ body {
     width: calc(33.333% - 10.666px); /* 确保卡片宽度一致 */
     box-sizing: border-box; /* 确保填充包含在宽度中 */
     min-height: 200px; /* 确保卡片高度一致 */
-    /* 调整单个卡片的内边距和尺寸 */
 }
 
 .card:nth-child(1) {
@@ -212,7 +209,6 @@ body {
     justify-content: center;
     max-width: 100%; /* 确保不超出容器 */
     box-sizing: border-box;
-    /* 调整活动区网格和填充 */
 }
 
 .activity {
@@ -318,4 +314,39 @@ body {
 .logo {
     width: 75px; /* 设置logo的大小 */
     margin-bottom: 20px; /* 调整logo下方的外边距 */
+}
+
+/* 针对移动设备的媒体查询 */
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 70%; /* 将所有字体大小缩小为70% */
+    }
+
+    .title {
+        font-size: 45px; /* 调整移动设备上大标题的大小 */
+    }
+
+    .small-title {
+        font-size: 18px; /* 调整移动设备上副标题的大小 */
+    }
+
+    .shared-subtitle {
+        font-size: 14px; /* 调整移动设备上共享副标题的大小 */
+    }
+
+    .section-title {
+        font-size: 28px; /* 调整移动设备上部分标题的大小 */
+    }
+
+    .section-subtitle {
+        font-size: 12px; /* 调整移动设备上部分副标题的大小 */
+    }
+
+    .card-title {
+        font-size: 16px; /* 调整移动设备上卡片标题的大小 */
+    }
+
+    .description {
+        font-size: 12px; /* 调整移动设备上描述文字的大小 */
+    }
 }
