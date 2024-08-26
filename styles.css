@@ -32,10 +32,10 @@ body {
 .button {
     width: 100%;
     padding: 12px 20px;
-    background-color: #4CAF50; /* 按钮背景颜色 */
+    background-color: #FFE267; /* 按钮背景颜色 */
     color: white; /* 按钮文本颜色 */
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 18px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
