@@ -60,7 +60,7 @@ body {
 .sport-icon {
     width: 400px;
     height: 400px;
-    margin: 0 auto 0px; /* 调整icon和其他元素之间的间距 */
+    margin: -30 auto 0px; /* 调整icon和其他元素之间的间距 */
     background: url('only_the_difficulty.png') no-repeat center center;
     background-size: contain;
     --animation-delay: 0.4s;
@@ -78,7 +78,8 @@ body {
 .title {
     font-size: 72px; /* 大标题字体大小 */
     font-weight: bolder; /* 大标题字体更粗 */
-    margin: 0 0 20px 0; /* 大标题与上方和下方元素的间距 */
+    margin-bottom: 0px; /* 副标题与下方元素的间距 */
+    margin-top: 0px;     /* 副标题与上方元素的间距 */
     line-height: 1.2;
     text-align: center; /* 确保标题居中 */
     --animation-delay: 0.6s;
@@ -87,8 +88,8 @@ body {
 
 .small-title {
     font-size: 25px; /* 副标题大小 */
-    margin-top: 13px; /* 副标题与上方元素的间距 */
-    margin-bottom: 13px; /* 副标题与下方元素的间距 */
+    margin-top: 20px; /* 副标题与上方元素的间距 */
+    margin-bottom: 20px; /* 副标题与下方元素的间距 */
     font-weight: normal; /* 正常字体粗细 */
     --animation-delay: 0.8s;
 }
@@ -188,6 +189,8 @@ body {
 
     .small-title {
         font-size: 20px; /* 调整移动设备上副标题的大小 */
+        margin-top: 13px; /* 副标题与上方元素的间距 */
+        margin-bottom: 13px; /* 副标题与下方元素的间距 */
     }
 
     .shared-subtitle {
@@ -213,6 +216,7 @@ body {
     .sport-icon {
         width: 250px;
         height: 250px;
+        
     }
     
     .caption {
