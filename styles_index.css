@@ -213,7 +213,7 @@ body {
     
         .title-ub {
             font-size: 30px; /* 调整移动设备上大标题的大小 */
-            margin-top: -100px; /* 调整移动设备上副标题与上方元素的间距 */
+            margin-top: 100px; /* 调整移动设备上副标题与上方元素的间距 */
             margin-bottom: 50px; /* 调整移动设备上副标题与下方元素的间距 */
         }
 }
