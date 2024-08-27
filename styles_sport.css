@@ -57,7 +57,7 @@ body {
 .sport-icon {
     width: 600px;
     height: 600px;
-    margin: 0 auto 0px; /* 调整icon和其他元素之间的间距 */
+    margin: -120px auto 0px; /* 调整icon和其他元素之间的间距 */
     background: url('only_the_difficulty.png') no-repeat center center;
     background-size: contain;
     --animation-delay: 0.4s;
@@ -340,6 +340,7 @@ body {
     .sport-icon {
         width: 300px;
         height: 300px;
+        margin-top: -60px;
     }
 
     .title {
@@ -374,5 +375,6 @@ body {
 
     .description {
         font-size: 19px; /* 调整移动设备上描述文字的大小 */
-    }
+    
+}
 }
