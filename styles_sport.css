@@ -72,7 +72,7 @@ body {
     --animation-delay: 0.6s;
 }
 
-.title-ub {
+.caption {
     font-size: 72px; /* 副标题大小 */
     margin-top: -150px; /* 副标题与上方元素的间距 */
     margin-bottom: 100px; /* 副标题与下方元素的间距 */
@@ -346,7 +346,7 @@ body {
         font-size: 55px; /* 调整移动设备上大标题的大小 */
     }
 
-    .title-ub {
+    .caption {
         font-size: 30px; /* 调整移动设备上大标题的大小 */
         margin-top: -30px; /* 调整移动设备上副标题与上方元素的间距 */
         margin-bottom:30px; /* 调整移动设备上副标题与下方元素的间距 */
