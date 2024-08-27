@@ -60,7 +60,7 @@ body {
 .sport-icon {
     width: 400px;
     height: 400px;
-    margin: 0 auto 0px; /* 调整icon和其他元素之间的间距 */
+    margin: 0 auto 20px; /* 调整icon和其他元素之间的间距 */
     background: url('only_the_difficulty.png') no-repeat center center;
     background-size: contain;
     --animation-delay: 0.4s;
