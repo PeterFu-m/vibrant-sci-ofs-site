@@ -43,7 +43,7 @@ body {
 }
 
 .container {
-    max-width: calc(100% - 5px); /* 确保内容宽度包含填充 */
+    max-width: calc(100% - 20px); /* 确保内容宽度包含填充 */
     margin: 0 auto;
     padding-top: 72px; /* logo和内容之间的间距 */
     box-sizing: border-box; /* 将填充包括在容器的宽高中 */
@@ -57,7 +57,7 @@ body {
 .sport-icon {
     width: 600px;
     height: 600px;
-    margin: -120px auto 0px; /* 调整icon和其他元素之间的间距 */
+    margin: -100px auto 0px; /* 调整icon和其他元素之间的间距 */
     background: url('only_the_difficulty.png') no-repeat center center;
     background-size: contain;
     --animation-delay: 0.4s;
@@ -81,8 +81,8 @@ body {
 }
 .small-title {
     font-size: 25px; /* 副标题大小 */
-    margin-top: 13px; /* 副标题与上方元素的间距 */
-    margin-bottom: 13px; /* 副标题与下方元素的间距 */
+    margin-top: 20px; /* 副标题与上方元素的间距 */
+    margin-bottom: 6px; /* 副标题与下方元素的间距 */
     font-weight: normal; /* 正常字体粗细 */
     --animation-delay: 0.8s;
 }
@@ -340,14 +340,13 @@ body {
     .sport-icon {
         width: 300px;
         height: 300px;
-        margin-top: -60px;
     }
 
     .title {
         font-size: 55px; /* 调整移动设备上大标题的大小 */
     }
 
-    .caption {
+    .title-ub {
         font-size: 30px; /* 调整移动设备上大标题的大小 */
         margin-top: -30px; /* 调整移动设备上副标题与上方元素的间距 */
         margin-bottom:30px; /* 调整移动设备上副标题与下方元素的间距 */
@@ -375,6 +374,5 @@ body {
 
     .description {
         font-size: 19px; /* 调整移动设备上描述文字的大小 */
-    
-}
+    }
 }
