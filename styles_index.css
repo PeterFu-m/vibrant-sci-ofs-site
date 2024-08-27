@@ -42,15 +42,16 @@ body {
 }
 
 .container {
-    max-width: calc(100% - 6px); /* 确保内容宽度包含填充 */
+    max-width: calc(100% - 5%); /* 确保内容宽度包含填充 */
+    min-width: calc(100% - 5%); /* 确保内容宽度包含填充 */
     margin: 0 auto;
-    padding: 24px; /* 为整个容器添加24px填充 */
-    padding-top: 64px; /* logo和内容之间的间距 */
+    padding: 3px; /* 为整个容器添加24px填充 */
+    padding-top: 42px; /* logo和内容之间的间距 */
     box-sizing: border-box; /* 将填充包括在容器的宽高中 */
     border-radius: 20px; /* 增加圆角 */
     align-items: center; /* 水平居中所有子元素 */
     justify-content: center; /* 垂直居中所有子元素 */
-    min-height: 100vh; /* 设置容器的最小高度为视口高度 */
+    min-height: 86vh; /* 设置容器的最小高度为视口高度 */
 }
 
 .logo {
@@ -209,7 +210,7 @@ body {
         margin-bottom:30px; /* 调整移动设备上副标题与下方元素的间距 */
     }
     .container {
-        max-width: calc(100% - 5px); /* 确保内容宽度包含填充 */
+        max-width: calc(100% - 3%); /* 确保内容宽度包含填充 */
         margin: 0 auto;
         max-height: 40vh; /* 设置容器的最小高度为视口高度的80% */
         padding: 5px; /* 为整个容器添加10px填充 */
