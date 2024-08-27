@@ -40,20 +40,11 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
-.button.sport-index {
-    width: 100%;
-    padding: 12px 20px;
-    background-color: #93FB04; /* 按钮背景颜色 */
-    color: rgb(0, 0, 0); /* 按钮文本颜色 */
-    border: none;
-    border-radius: 10px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
+
 .container {
     max-width: calc(100% - 20px); /* 确保内容宽度包含填充 */
     margin: 0 auto;
+    min-height: 80vh;
     padding: 10px; /* 为整个容器添加10px填充 */
     padding-top: 72px; /* logo和内容之间的间距 */
     box-sizing: border-box; /* 将填充包括在容器的宽高中 */
@@ -66,8 +57,8 @@ body {
 
 
 .sport-icon {
-    width: 300px;
-    height: 300px;
+    width: 600px;
+    height: 600px;
     margin: 0 auto 0px; /* 调整icon和其他元素之间的间距 */
     background: url('only_the_difficulty.png') no-repeat center center;
     background-size: contain;
@@ -92,6 +83,7 @@ body {
     --animation-delay: 0.6s;
 }
 
+
 .small-title {
     font-size: 25px; /* 副标题大小 */
     margin-top: 20px; /* 副标题与上方元素的间距 */
@@ -103,7 +95,9 @@ body {
     color: #ffffff;
     font-size: 72px; /* 大标题字体大小 */
     font-weight: bolder; /* 大标题字体更粗 */
-    margin: 0 0 20px 0; /* 大标题与上方和下方元素的间距 */
+    margin-bottom: 50px; /* 副标题与下方元素的间距 */
+    margin-top: -150px; /* 副标题与上方元素的间距 */
+
     line-height: 1.2;
     text-align: center; /* 确保标题居中 */
     --animation-delay: 0.6s;
@@ -112,7 +106,7 @@ body {
 .title-ut {
     color: #ffffff;
     font-size: 25px; /* 副标题大小 */
-    margin-top: 0px; /* 副标题与上方元素的间距 */
+    margin-top: -50px; /* 副标题与上方元素的间距 */
     margin-bottom: 100px; /* 副标题与下方元素的间距 */
     font-weight: bolder; /* 正常字体粗细 */
     --animation-delay: 0.8s;
@@ -143,188 +137,6 @@ body {
     text-align: center; /* 部分副标题居中 */
     --animation-delay: 1.4s;
 }
-.button.sport-index {
-    width: 100%;
-    padding: 12px 20px;
-    background-color: #93FB04; /* 按钮背景颜色 */
-    color: #000000; /* 将按钮文本颜色设置为黑色 */
-    border: none;
-    border-radius: 10px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.grid {
-    display: flex;
-    justify-content: center;
-    gap: 16px; /* 卡片之间的间距 */
-    margin: 0 auto;
-    max-width: 100%;
-    margin-top: 40px; /* 网格与上方元素的间距 */
-    margin-bottom: 40px; /* 网格与下方元素的间距 */
-    --animation-delay: 1.6s;
-}
-
-.card {
-    border-radius: 10px;
-    padding: 10px;
-    text-align: left;
-    position: relative;
-    cursor: pointer;
-    transition: background-color 0.4s ease, color 0.4s ease;
-    width: calc(33.333% - 10.666px); /* 确保卡片宽度一致 */
-    box-sizing: border-box; /* 确保填充包含在宽度中 */
-    min-height: 200px; /* 确保卡片高度一致 */
-}
-
-.card:nth-child(1) {
-    --animation-delay: 1.8s;
-}
-
-.card:nth-child(2) {
-    --animation-delay: 2s;
-}
-
-.card:nth-child(3) {
-    --animation-delay: 2.2s;
-}
-
-.card.orange {
-    background-color: #FFE5CC; /* 浅橙色背景 */
-    color: #CC5200; /* 深橙色文本 */
-}
-
-.card.green {
-    background-color: #DFF2E0; /* 浅绿色背景 */
-    color: #2D8C42; /* 深绿色文本 */
-}
-
-.card.pink {
-    background-color: #FFD6E8; /* 浅粉色背景 */
-    color: #CC3385; /* 深粉色文本 */
-}
-
-.card.active.orange {
-    background-color: #FFFFFF;
-    color: #CC5200;
-}
-
-.card.active.green {
-    background-color: #FFFFFF;
-    color: #2D8C42;
-}
-
-.card.active.pink {
-    background-color: #FFFFFF;
-    color: #CC3385;
-}
-
-.card-content {
-    display: none; /* 默认隐藏 */
-    margin-top: 0px; /* 卡片内容与卡片标题之间的间距 */
-    opacity: 1; /* 确保内容不进行动画 */
-}
-
-.card-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px; /* 卡片标题与下方内容之间的间距 */
-}
-
-.card.active .card-content {
-    display: block;
-}
-
-.page1,
-.page2,
-.page3,
-.page4 {
-    padding: 60px 0; /* 为每个页面部分增加上下间距 */
-    text-align: center; /* 每个部分内容居中 */
-}
-
-.page2,
-.page3,
-.page4 {
-    margin-top: 100px; /* 各页面部分之间100px间距 */
-}
-
-/* 第3页样式 */
-.activity-container-wrapper {
-    max-width: 1000px; /* 限制宽度以确保居中 */
-    margin: 0 auto; /* 居中容器 */
-    margin-top: 40px; /* 调整上方元素与活动区的间距 */
-    margin-bottom: 40px; /* 调整活动区与下方元素的间距 */
-}
-
-.activity-container {
-    background-color: #DDEAF7; /* 浅蓝色背景 */
-    padding: 20px; /* 活动区内部的填充 */
-    border-radius: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 200px 100px 150px;
-    gap: 10px;
-    justify-content: center;
-    max-width: 100%; /* 确保不超出容器 */
-    box-sizing: border-box;
-}
-
-.activity {
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 19px;
-    font-weight: regular;
-    color: #FFFFFF;
-    padding: 20px; /* 调整单个活动区块的内边距 */
-    text-align: center;
-}
-
-.badminton {
-    background-color: #5E8B71;
-    grid-column: 1 / 2;
-    grid-row: 1 / 4;
-}
-
-.pingpong {
-    background-color: #F15A4A;
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-}
-
-.basketball {
-    background-color: #F2A83C;
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-}
-
-.pingpong-2 {
-    background-color: #F15A4A;
-    grid-column: 2 / 3;
-    grid-row: 3 / 4;
-}
-
-.classroom {
-    background-color: #FFD700;
-    grid-column: 3 / 4;
-    grid-row: 1 / 4;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.classroom .flower-icon {
-    width: 50px;
-    height: 50px;
-    background: url('your-flower-image.png') no-repeat center center;
-    background-size: contain;
-    margin-bottom: 10px; /* 调整icon与文本之间的间距 */
-}
-
 /* 第4页样式 */
 .page4 {
     position: relative;
@@ -349,35 +161,14 @@ body {
 .pagesport {
     position: relative;
     background-color: #000000; /* 黑色背景 */
-    min-height: 100vh; /* 确保覆盖整个视口 */
+    min-height: 80vh; /* 确保覆盖整个视口 */
     justify-content: center;
     align-items: center;
     box-sizing: border-box; /* 确保填充包含在元素大小中 */
 }
 
-.description-bg {
-    background-color: #FFE5CC; /* 浅橙色背景 */
-    border-radius: 20px; /* 圆角矩形 */
-    padding: 20px; /* 矩形内的填充 */
-    margin-top: 30px; /* 矩形与上方元素之间的间距 */
-    z-index: -1; /* 确保在描述文本后面 */
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%; /* 调整矩形的宽度 */
-    box-sizing: border-box;
-}
 
-.description {
-    background-color: rgba(255, 235, 205, 0.8); /* 浅黄色背景，带透明度 */
-    padding: 20px;
-    border-radius: 10px;
-    font-size: 16px;
-    line-height: 1.6;
-    margin-top: 60px; /* 增加上方元素与描述之间的间距 */
-    position: relative; /* 确保描述文本在背景上方 */
-    z-index: 1;
-}
+
 
 .logo {
     width: 75px; /* 设置logo的大小 */
