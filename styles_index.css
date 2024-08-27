@@ -42,12 +42,13 @@ body {
 }
 
 .container {
-    max-width: calc(100% - 6px); /* 确保内容宽度包含填充 */
-    margin: 0 auto;
-    padding: 5px; /* 为整个容器添加10px填充 */
-    padding-top: 72px; /* logo和内容之间的间距 */
-    box-sizing: border-box; /* 将填充包括在容器的宽高中 */
+    width: 90%; /* 容器宽度为视口宽度的90%，两边各留5%的安全区 */
+    margin: 0 auto; /* 将容器水平居中 */
+    padding: 20px; /* 为容器内容添加适当的填充 */
+    box-sizing: border-box; /* 确保填充包括在容器的宽高中 */
     border-radius: 20px; /* 增加圆角 */
+    background-color: #f0f0f0; /* 可选：为容器添加背景色 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 可选：为容器添加轻微的阴影效果 */
 }
 
 .logo {
@@ -152,13 +153,13 @@ body {
 }
 
 .page4-container {
-    text-align: center;
-    z-index: 1; /* 确保内容在背景上方 */
-    position: relative; /* 确保容器相对于背景定位 */
-    width: 100%; /* 确保其占据整个宽度 */
-    max-width: 1000px; /* 限制最大宽度 */
-    margin: 0 auto; /* 容器居中 */
-    padding: 20px; /* 调整容器内部的填充 */
+    width: 90%; /* 容器宽度为视口宽度的90%，两边各留5%的安全区 */
+    margin: 0 auto; /* 将容器水平居中 */
+    padding: 20px; /* 为容器内容添加适当的填充 */
+    box-sizing: border-box; /* 确保填充包括在容器的宽高中 */
+    border-radius: 20px; /* 增加圆角 */
+    background-color: #f0f0f0; /* 可选：为容器添加背景色 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 可选：为容器添加轻微的阴影效果 */
 }
 .pagesport {
     position: relative;
@@ -225,13 +226,13 @@ body {
         margin-bottom:30px; /* 调整移动设备上副标题与下方元素的间距 */
     }
     .container {
-        max-width: calc(100% - 5px); /* 确保内容宽度包含填充 */
-        margin: 0 auto;
-        max-height: 50vh; /* 设置容器的最小高度为视口高度的80% */
-        padding: 5px; /* 为整个容器添加10px填充 */
-        padding-top: 72px; /* logo和内容之间的间距 */
-        box-sizing: border-box; /* 将填充包括在容器的宽高中 */
-        border-radius: 20px; /* 增加圆角 */
+            width: 90%; /* 容器宽度为视口宽度的90%，两边各留5%的安全区 */
+            margin: 0 auto; /* 将容器水平居中 */
+            padding: 20px; /* 为容器内容添加适当的填充 */
+            box-sizing: border-box; /* 确保填充包括在容器的宽高中 */
+            border-radius: 20px; /* 增加圆角 */
+            background-color: #f0f0f0; /* 可选：为容器添加背景色 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 可选：为容器添加轻微的阴影效果 */
     }
 
 }
