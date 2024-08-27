@@ -1,5 +1,5 @@
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif , sans-serif;
     margin: 0;
     padding: 0;
     background-color: #FFFFFF;
@@ -29,7 +29,6 @@ body {
     opacity: 1; /* 确保body立即可见 */
     animation: none; /* body本身无动画，只有子元素有 */
 }
-
 .button {
     width: 100%;
     padding: 12px 20px;
@@ -43,16 +42,14 @@ body {
 }
 
 .container {
-    width: 90%; /* 自动调整宽度，确保边缘有5%的安全区 */
+    max-width: calc(100% - 6px); /* 确保内容宽度包含填充 */
     margin: 0 auto;
-    padding: 5px; /* 为整个容器添加5px填充 */
+    min-height: 55vh; /* 设置容器的最小高度为视口高度的80% */
+    padding: 5px; /* 为整个容器添加10px填充 */
     padding-top: 72px; /* logo和内容之间的间距 */
     box-sizing: border-box; /* 将填充包括在容器的宽高中 */
     border-radius: 20px; /* 增加圆角 */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
 }
 
 .logo {
@@ -60,11 +57,14 @@ body {
     margin-bottom: 40px; /* 增加logo下方的外边距 */
 }
 
+
 .sport-icon {
     width: 400px;
+    text-align: center;
     height: 400px;
-    margin: 0 auto 20px; /* 调整icon和其他元素之间的间距 */
-    margin-top: -20px; /* 调整icon与上方元素的间距 */
+    display: flex; /* 添加此行 */
+    justify-content: center;
+    align-items: center;
     background: url('only_the_difficulty.png') no-repeat center center;
     background-size: contain;
     --animation-delay: 0.4s;
@@ -82,35 +82,24 @@ body {
 .title {
     font-size: 72px; /* 大标题字体大小 */
     font-weight: bolder; /* 大标题字体更粗 */
-    margin-bottom: 0px; /* 副标题与下方元素的间距 */
-    margin-top: 0px; /* 副标题与上方元素的间距 */
+    margin: 0 0 20px 0; /* 大标题与上方和下方元素的间距 */
     line-height: 1.2;
     text-align: center; /* 确保标题居中 */
     --animation-delay: 0.6s;
 }
+
 
 .small-title {
     font-size: 25px; /* 副标题大小 */
     margin-top: 20px; /* 副标题与上方元素的间距 */
-    margin-bottom: 20px; /* 副标题与下方元素的间距 */
+    margin-bottom: 6px; /* 副标题与下方元素的间距 */
     font-weight: normal; /* 正常字体粗细 */
     --animation-delay: 0.8s;
 }
 
-.title-white {
-    color: #ffffff;
-    font-size: 72px; /* 大标题字体大小 */
-    font-weight: bolder; /* 大标题字体更粗 */
-    margin-bottom: 50px; /* 副标题与下方元素的间距 */
-    margin-top: -150px; /* 副标题与上方元素的间距 */
-    line-height: 1.2;
-    text-align: center; /* 确保标题居中 */
-    --animation-delay: 0.6s;
-}
-
 .caption {
     color: #ffffff;
-    font-size: 30px; /* 副标题大小 */
+    font-size: 30px; /* 副标题大小*/ 
     margin-top: -120px; /* 副标题与上方元素的间距 */
     margin-bottom: 50px; /* 副标题与下方元素的间距 */
     font-weight: bolder; /* 正常字体粗细 */
@@ -142,7 +131,6 @@ body {
     text-align: center; /* 部分副标题居中 */
     --animation-delay: 1.4s;
 }
-
 /* 第4页样式 */
 .page4 {
     position: relative;
@@ -164,24 +152,29 @@ body {
     margin: 0 auto; /* 容器居中 */
     padding: 20px; /* 调整容器内部的填充 */
 }
-
 .pagesport {
     position: relative;
     background-color: #000000; /* 黑色背景 */
     min-height: 55vh; /* 确保覆盖整个视口 */
-    display: flex;
+    display: flex; /* 添加此行 */
     justify-content: center;
     align-items: center;
     box-sizing: border-box; /* 确保填充包含在元素大小中 */
     border-radius: 20px; /* 增加圆角 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 可选：为容器添加轻微的阴影效果 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 为容器添加轻微的阴影效果 */
+}
+
+
+
+
+.logo {
+    width: 75px; /* 设置logo的大小 */
+    text-align: center;
+    margin-bottom: 20px; /* 调整logo下方的外边距 */
 }
 
 /* 针对移动设备的媒体查询 */
 @media only screen and (max-width: 768px) {
-    .container {
-        width: 95%; /* 减少宽度以适应移动设备的安全区 */
-    }
 
     .title {
         font-size: 55px; /* 调整移动设备上大标题的大小 */
@@ -189,8 +182,6 @@ body {
 
     .small-title {
         font-size: 20px; /* 调整移动设备上副标题的大小 */
-        margin-top: 13px; /* 副标题与上方元素的间距 */
-        margin-bottom: 13px; /* 副标题与下方元素的间距 */
     }
 
     .shared-subtitle {
@@ -217,10 +208,20 @@ body {
         width: 250px;
         height: 250px;
     }
-
+    
     .caption {
         font-size: 30px; /* 调整移动设备上大标题的大小 */
         margin-top: -30px; /* 调整移动设备上副标题与上方元素的间距 */
-        margin-bottom: 30px; /* 调整移动设备上副标题与下方元素的间距 */
+        margin-bottom:30px; /* 调整移动设备上副标题与下方元素的间距 */
     }
+    .container {
+        max-width: calc(100% - 5px); /* 确保内容宽度包含填充 */
+        margin: 0 auto;
+        max-height: 40vh; /* 设置容器的最小高度为视口高度的80% */
+        padding: 5px; /* 为整个容器添加10px填充 */
+        padding-top: 72px; /* logo和内容之间的间距 */
+        box-sizing: border-box; /* 将填充包括在容器的宽高中 */
+        border-radius: 20px; /* 增加圆角 */
+    }
+
 }
