@@ -43,7 +43,7 @@ body {
 }
 
 .container {
-    max-width: calc(100% - 20px); /* 确保内容宽度包含填充 */
+    max-width: calc(100% - 5px); /* 确保内容宽度包含填充 */
     margin: 0 auto;
     padding-top: 72px; /* logo和内容之间的间距 */
     box-sizing: border-box; /* 将填充包括在容器的宽高中 */

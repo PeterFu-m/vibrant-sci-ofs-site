@@ -42,7 +42,7 @@ body {
 }
 
 .container {
-    max-width: calc(100% - 20px); /* 确保内容宽度包含填充 */
+    max-width: calc(100% - 5px); /* 确保内容宽度包含填充 */
     margin: 0 auto;
     padding: 10px; /* 为整个容器添加10px填充 */
     padding-top: 72px; /* logo和内容之间的间距 */
@@ -239,7 +239,7 @@ body {
 
 .activity-container {
     background-color: #DDEAF7; /* 浅蓝色背景 */
-    padding: 20px; /* 活动区内部的填充 */
+    padding: 10px; /* 活动区内部的填充 */
     border-radius: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

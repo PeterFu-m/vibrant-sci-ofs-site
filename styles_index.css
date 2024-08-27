@@ -42,10 +42,10 @@ body {
 }
 
 .container {
-    max-width: calc(100% - 20px); /* 确保内容宽度包含填充 */
+    max-width: calc(100% - 6px); /* 确保内容宽度包含填充 */
     margin: 0 auto;
     min-height: 80vh; /* 设置容器的最小高度为视口高度的80% */
-    padding: 10px; /* 为整个容器添加10px填充 */
+    padding: 5px; /* 为整个容器添加10px填充 */
     padding-top: 72px; /* logo和内容之间的间距 */
     box-sizing: border-box; /* 将填充包括在容器的宽高中 */
     border-radius: 20px; /* 增加圆角 */
@@ -221,10 +221,10 @@ body {
         margin-bottom:30px; /* 调整移动设备上副标题与下方元素的间距 */
     }
     .container {
-        max-width: calc(100% - 8px); /* 确保内容宽度包含填充 */
+        max-width: calc(100% - 5px); /* 确保内容宽度包含填充 */
         margin: 0 auto;
         max-height: 40vh; /* 设置容器的最小高度为视口高度的80% */
-        padding: 10px; /* 为整个容器添加10px填充 */
+        padding: 5px; /* 为整个容器添加10px填充 */
         padding-top: 72px; /* logo和内容之间的间距 */
         box-sizing: border-box; /* 将填充包括在容器的宽高中 */
         border-radius: 20px; /* 增加圆角 */
