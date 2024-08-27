@@ -44,12 +44,11 @@ body {
 .container {
     max-width: calc(100% - 6px); /* 确保内容宽度包含填充 */
     margin: 0 auto;
-    min-height: 55vh; /* 设置容器的最小高度为视口高度的80% */
+    min-height: 80vh; /* 设置容器的最小高度为视口高度的80% */
     padding: 5px; /* 为整个容器添加10px填充 */
     padding-top: 72px; /* logo和内容之间的间距 */
     box-sizing: border-box; /* 将填充包括在容器的宽高中 */
     border-radius: 20px; /* 增加圆角 */
-
 }
 
 .logo {
@@ -59,12 +58,9 @@ body {
 
 
 .sport-icon {
-    width: 400px;
-    text-align: center;
-    height: 400px;
-    display: flex; /* 添加此行 */
-    justify-content: center;
-    align-items: center;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto 0px; /* 调整icon和其他元素之间的间距 */
     background: url('only_the_difficulty.png') no-repeat center center;
     background-size: contain;
     --animation-delay: 0.4s;
@@ -95,6 +91,17 @@ body {
     margin-bottom: 6px; /* 副标题与下方元素的间距 */
     font-weight: normal; /* 正常字体粗细 */
     --animation-delay: 0.8s;
+}
+.title-white {
+    color: #ffffff;
+    font-size: 72px; /* 大标题字体大小 */
+    font-weight: bolder; /* 大标题字体更粗 */
+    margin-bottom: 50px; /* 副标题与下方元素的间距 */
+    margin-top: -150px; /* 副标题与上方元素的间距 */
+
+    line-height: 1.2;
+    text-align: center; /* 确保标题居中 */
+    --animation-delay: 0.6s;
 }
 
 .caption {
@@ -155,13 +162,13 @@ body {
 .pagesport {
     position: relative;
     background-color: #000000; /* 黑色背景 */
-    min-height: 55vh; /* 确保覆盖整个视口 */
-    display: flex; /* 添加此行 */
+    min-height: 60vh; /* 确保覆盖整个视口 */
     justify-content: center;
     align-items: center;
     box-sizing: border-box; /* 确保填充包含在元素大小中 */
     border-radius: 20px; /* 增加圆角 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 为容器添加轻微的阴影效果 */
+    background-color: #000000; /* 可选：为容器添加背景色以更好展示圆角效果 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 可选：为容器添加轻微的阴影效果 */
 }
 
 
@@ -169,7 +176,6 @@ body {
 
 .logo {
     width: 75px; /* 设置logo的大小 */
-    text-align: center;
     margin-bottom: 20px; /* 调整logo下方的外边距 */
 }
 

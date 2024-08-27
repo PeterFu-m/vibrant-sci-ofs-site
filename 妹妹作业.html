@@ -41,6 +41,10 @@
         button {
             margin-left: 10px;
         }
+
+        input[type="file"] {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -79,11 +83,14 @@
         <button onclick="increaseProgress('science', 55)">+</button>
     </div>
 
+    <button onclick="saveProgress()">保存进度到文件</button>
+    <button onclick="document.getElementById('fileInput').click()">从文件加载进度</button>
+    <input type="file" id="fileInput" onchange="loadProgress(event)">
+
     <script>
-        // 初始化进度
-        let chineseProgress = parseInt(localStorage.getItem('chineseProgress')) || 0;
-        let mathProgress = parseInt(localStorage.getItem('mathProgress')) || 0;
-        let scienceProgress = parseInt(localStorage.getItem('scienceProgress')) || 0;
+        let chineseProgress = 0;
+        let mathProgress = 0;
+        let scienceProgress = 0;
 
         function updateProgress(barId, progress, total) {
             const bar = document.getElementById(barId);
@@ -94,28 +101,49 @@
             if (subject === 'chinese') {
                 if (chineseProgress < total) {
                     chineseProgress++;
-                    localStorage.setItem('chineseProgress', chineseProgress);
                     updateProgress('chineseProgress', chineseProgress, total);
                 }
             } else if (subject === 'math') {
                 if (mathProgress < total) {
                     mathProgress++;
-                    localStorage.setItem('mathProgress', mathProgress);
                     updateProgress('mathProgress', mathProgress, total);
                 }
             } else if (subject === 'science') {
                 if (scienceProgress < total) {
                     scienceProgress++;
-                    localStorage.setItem('scienceProgress', scienceProgress);
                     updateProgress('scienceProgress', scienceProgress, total);
                 }
             }
         }
 
-        // 设置进度条的最大值
-        document.getElementById('chineseProgress').setAttribute('data-total', 36);
-        document.getElementById('mathProgress').setAttribute('data-total', 17);
-        document.getElementById('scienceProgress').setAttribute('data-total', 55);
+        function saveProgress() {
+            const data = {
+                chinese: chineseProgress,
+                math: mathProgress,
+                science: scienceProgress
+            };
+            const file = new Blob([JSON.stringify(data)], {type: 'application/json'});
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(file);
+            a.download = 'progress.json';
+            a.click();
+        }
+
+        function loadProgress(event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const data = JSON.parse(e.target.result);
+                chineseProgress = data.chinese || 0;
+                mathProgress = data.math || 0;
+                scienceProgress = data.science || 0;
+
+                updateProgress('chineseProgress', chineseProgress, 36);
+                updateProgress('mathProgress', mathProgress, 17);
+                updateProgress('scienceProgress', scienceProgress, 55);
+            };
+            reader.readAsText(file);
+        }
 
         // 页面加载时更新进度条
         updateProgress('chineseProgress', chineseProgress, 36);
