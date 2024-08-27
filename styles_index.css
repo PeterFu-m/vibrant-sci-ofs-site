@@ -44,7 +44,7 @@ body {
 .container {
     max-width: calc(100% - 6px); /* 确保内容宽度包含填充 */
     margin: 0 auto;
-    min-height: 80vh; /* 设置容器的最小高度为视口高度的80% */
+    min-height: 55vh; /* 设置容器的最小高度为视口高度的80% */
     padding: 5px; /* 为整个容器添加10px填充 */
     padding-top: 72px; /* logo和内容之间的间距 */
     box-sizing: border-box; /* 将填充包括在容器的宽高中 */
@@ -162,7 +162,7 @@ body {
 .pagesport {
     position: relative;
     background-color: #000000; /* 黑色背景 */
-    min-height: 40vh; /* 确保覆盖整个视口 */
+    min-height: 55vh; /* 确保覆盖整个视口 */
     justify-content: center;
     align-items: center;
     box-sizing: border-box; /* 确保填充包含在元素大小中 */
