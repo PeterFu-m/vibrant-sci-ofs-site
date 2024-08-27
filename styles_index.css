@@ -205,4 +205,13 @@ body {
     .description {
         font-size: 19px; /* 调整移动设备上描述文字的大小 */
     }
+
+    .sport-icon {
+        width: 250px;
+        height: 250px;
+    
+    .title-ut {
+        font-size: 55px; /* 调整移动设备上标题的大小 */
+    }
+    }
 }

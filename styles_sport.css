@@ -347,9 +347,9 @@ body {
     }
 
     .title-ub {
-        font-size: 55px; /* 调整移动设备上大标题的大小 */
+        font-size: 30px; /* 调整移动设备上大标题的大小 */
     }
-    
+
     .small-title {
         font-size: 20px; /* 调整移动设备上副标题的大小 */
     }
